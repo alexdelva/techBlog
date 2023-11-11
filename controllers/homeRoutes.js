@@ -11,11 +11,11 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
-    //select user.name , project.* from project join user on user.id = project.user_id
+    //select user.username , project.* from project join user on user.id = project.user_id
 
 //projectData is raw data, can't use raw data on handlebar template
     // Serialize data so the template can read it
@@ -40,7 +40,7 @@ router.get('/project/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });

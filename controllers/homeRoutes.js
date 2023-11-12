@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
 
 //http://localhost:3001/Post/1
-router.get('/Post/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
